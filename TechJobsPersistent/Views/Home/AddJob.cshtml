@@ -5,6 +5,12 @@
         <label>Name</label>
         <input class="form-control" />
         <span></span>
+        <select>
+            @foreach (Employer employer in @ViewBag.SelectListItem)
+            {
+              <option asp-controller="Home" asp-action="AddJob" asp-route-id="@employer.Id" value="@employer.Id">@employer.Name</option>
+            }
+        </select>
     </div>
 
     <input type="submit" value="Add Job" />

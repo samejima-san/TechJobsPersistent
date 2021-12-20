@@ -15,6 +15,11 @@ namespace TechJobsPersistent.Data
         {
         }
 
+        public JobDbContext()
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<JobSkill>()
